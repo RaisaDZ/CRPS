@@ -72,10 +72,6 @@ loss_qr = apply((qr_vec - outcomes_vec)^2, 1, sum) * (B-A) / step
 Loss_qr = cumsum(loss_qr) 
 loss_qr2 = apply((qr_vec2 - outcomes_vec)^2, 1, sum) * (B-A) / step
 Loss_qr2 = cumsum(loss_qr2) 
-max(Loss_AA)
-max(Loss_lm)
-max(Loss_qr)
-max(Loss_qr2)
 
 pdf("Loss_diff_toy2.pdf", height = 8.5, width = 8.5, paper = "special")
 plot(Loss_lm - Loss_AA, type = "l", lty = 1, lwd=3,cex=2,cex.lab=2, cex.axis=2, cex.main=2, cex.sub=2, xlab = "Time", ylab = "", main= "Loss difference")
