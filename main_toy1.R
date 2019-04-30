@@ -58,9 +58,6 @@ loss_lm = apply((lm_vec - outcomes_vec)^2, 1, sum) * (B-A) / step
 Loss_lm = cumsum(loss_lm) 
 loss_qr = apply((qr_vec - outcomes_vec)^2, 1, sum) * (B-A) / step
 Loss_qr = cumsum(loss_qr) 
-max(Loss_AA)
-max(Loss_lm)
-max(Loss_qr)
 
 #visualise the bound
 a = 0.05
